@@ -1,5 +1,7 @@
 theInput = document.getElementById('theInput');
 
 theInput.addEventListener('focusout', (event) => {
-    event.target.style.background = 'white';
-  });
+    if(typeof Number(theInput.value) == 'number'){
+        theInput.value = "0";
+    }  
+});
